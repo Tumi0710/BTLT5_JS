@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Tính b mũ n</title>
+</head>
+<body>
+  <h3>Chương trình tính b<sup>n</sup></h3>
+
+  <label>Nhập b:</label>
+  <input type="number" id="b" min="1"><br><br>
+
+  <label>Nhập n:</label>
+  <input type="number" id="n" min="0"><br><br>
+
+  <button onclick="tinhMu()">Tính</button>
+
+  <p id="ketqua"></p>
+
+  <script>
+    function tinhMu() {
+      let b = parseInt(document.getElementById("b").value);
+      let n = parseInt(document.getElementById("n").value);
+      let kq = 1;
+
+      for (let i = 0; i < n; i++) {
+        kq *= b;
+      }
+
+      document.getElementById("ketqua").innerText = b + " ^ " + n + " = " + kq;
+    }
+  </script>
+</body>
+</html>

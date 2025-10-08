@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Đối tượng User</title>
+</head>
+<body>
+  <h3>Thao tác với đối tượng User</h3>
+
+  <button onclick="thucHien()">Thực hiện</button>
+
+  <p id="ketqua"></p>
+
+  <script>
+    function thucHien() {
+      var User = { Name: "Max", Age: 20 };
+
+      var text = "a) Thông tin ban đầu:\n";
+      text += "Name: " + User.Name + "\n";
+      text += "Age: " + User.Age + "\n\n";
+
+      User.Surname = "Lee";
+
+      text += "b) Sau khi thêm Surname:\n";
+      text += "Name: " + User.Name + "\n";
+      text += "Surname: " + User.Surname + "\n";
+      text += "Age: " + User.Age + "\n\n";
+
+      User.Age = 30;
+
+      text += "c) Sau khi thay đổi Age thành 30:\n";
+      text += "Name: " + User.Name + "\n";
+      text += "Surname: " + User.Surname + "\n";
+      text += "Age: " + User.Age;
+
+      document.getElementById("ketqua").innerText = text;
+    }
+  </script>
+</body>
+</html>

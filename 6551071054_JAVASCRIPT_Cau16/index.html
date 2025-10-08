@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Đối tượng HinhTru</title>
+</head>
+<body>
+  <h3>Tính toán với đối tượng HinhTru</h3>
+
+  <button onclick="thucHien()">Thực hiện</button>
+
+  <p id="ketqua"></p>
+
+  <script>
+    function thucHien() {
+      var HinhTru = { radius: 10, height: 15 };
+
+      var theTich = Math.PI * Math.pow(HinhTru.radius, 2) * HinhTru.height;
+
+      var text = "a) Thể tích hình trụ ban đầu:\n";
+      text += "Thể tích = " + theTich.toFixed(2) + "\n\n";
+
+      HinhTru.height = 30;
+
+      var dienTich = 2 * Math.PI * HinhTru.radius * (HinhTru.height + HinhTru.radius);
+
+      text += "b) Sau khi cập nhật height = 30:\n";
+      text += "Diện tích toàn phần = " + dienTich.toFixed(2);
+
+      document.getElementById("ketqua").innerText = text;
+    }
+  </script>
+</body>
+</html>

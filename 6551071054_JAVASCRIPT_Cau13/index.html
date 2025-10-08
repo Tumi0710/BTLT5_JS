@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Liệt kê số nguyên tố nhỏ hơn n</title>
+</head>
+<body>
+  <h3>Chương trình liệt kê các số nguyên tố nhỏ hơn n</h3>
+
+  <label>Nhập n:</label>
+  <input type="number" id="n" min="2">
+  <button onclick="lietKeSoNguyenTo()">Liệt kê</button>
+
+  <p id="ketqua"></p>
+
+  <script>
+    function laSoNguyenTo(x) {
+      if (x < 2) return false;
+      for (let i = 2; i <= Math.sqrt(x); i++) {
+        if (x % i === 0) return false;
+      }
+      return true;
+    }
+
+    function lietKeSoNguyenTo() {
+      let n = parseInt(document.getElementById("n").value);
+      let ketqua = "";
+
+      for (let i = 2; i < n; i++) {
+        if (laSoNguyenTo(i)) ketqua += i + " ";
+      }
+
+      document.getElementById("ketqua").innerText =
+        "Các số nguyên tố nhỏ hơn " + n + " là: " + ketqua;
+    }
+  </script>
+</body>
+</html>

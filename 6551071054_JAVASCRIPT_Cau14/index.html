@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Đối tượng Student</title>
+</head>
+<body>
+  <h3>Nhập thông tin sinh viên</h3>
+
+  <label>Họ tên:</label>
+  <input type="text" id="name"><br><br>
+
+  <label>Mã số:</label>
+  <input type="text" id="id"><br><br>
+
+  <label>Giới tính:</label>
+  <input type="text" id="gender"><br><br>
+
+  <button onclick="hienThiThongTin()">Hiển thị thông tin</button>
+
+  <p id="ketqua"></p>
+
+  <script>
+    function hienThiThongTin() {
+      var Student = {
+        Name: document.getElementById("name").value,
+        NumberID: document.getElementById("id").value,
+        Gender: document.getElementById("gender").value
+      };
+
+      let text = "Thông tin sinh viên:\n";
+      text += "Họ tên: " + Student.Name + "\n";
+      text += "Mã số: " + Student.NumberID + "\n";
+      text += "Giới tính: " + Student.Gender;
+      document.getElementById("ketqua").innerText = text;
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Hiển thị ngày giờ hiện tại</title>
+</head>
+<body>
+  <script>
+    var now = new Date();
+
+    var day = now.getDate();
+    var month = now.getMonth() + 1;
+    var year = now.getFullYear();
+    var hour = now.getHours();
+    var minute = now.getMinutes();
+    var second = now.getSeconds();
+
+    alert("Trang này cho biết\nNgày: " + day + "/" + month + "/" + year +
+          " Giờ: " + hour + ":" + minute + ":" + second);
+  </script>
+</body>
+</html>

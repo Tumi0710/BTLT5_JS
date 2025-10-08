@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Chuyển số nhị phân sang thập phân</title>
+</head>
+<body>
+  <h3>Chương trình chuyển đổi số nhị phân sang thập phân</h3>
+
+  <label>Nhập số nhị phân:</label>
+  <input type="text" id="binary">
+  <button onclick="chuyenDoi()">Chuyển đổi</button>
+
+  <p id="ketqua"></p>
+
+  <script>
+    function chuyenDoi() {
+      var binary = document.getElementById("binary").value;
+      var decimal = parseInt(binary, 2);
+
+      if (isNaN(decimal)) {
+        document.getElementById("ketqua").innerText = "Giá trị nhập không hợp lệ!";
+        return;
+      }
+
+      document.getElementById("ketqua").innerText =
+        binary + "₂ = " + decimal + "₁₀";
+    }
+  </script>
+</body>
+</html>

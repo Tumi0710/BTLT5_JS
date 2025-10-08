@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Tính giai thừa</title>
+</head>
+<body>
+  <h3>Chương trình tính giai thừa của số nguyên dương n</h3>
+
+  <label>Nhập n:</label>
+  <input type="number" id="n" min="0">
+  <button onclick="tinhGiaiThua()">Tính</button>
+
+  <p id="ketqua"></p>
+
+  <script>
+    function tinhGiaiThua() {
+      var n = parseInt(document.getElementById("n").value);
+      if (isNaN(n) || n < 0) {
+        document.getElementById("ketqua").innerText = "Vui lòng nhập số nguyên dương!";
+        return;
+      }
+
+      var gt = 1;
+      for (var i = 1; i <= n; i++) {
+        gt = Math.multiplyExact ? Math.multiplyExact(gt, i) : gt * i;
+      }
+
+      document.getElementById("ketqua").innerText = n + "! = " + gt;
+    }
+  </script>
+</body>
+</html>

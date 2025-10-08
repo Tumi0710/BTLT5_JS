@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Đảo ngược số nguyên</title>
+</head>
+<body>
+  <h3>Chương trình đảo ngược số nguyên</h3>
+  <input type="number" id="num" placeholder="Nhập số nguyên">
+  <button onclick="daoNguocSo()">Đảo ngược</button>
+
+  <p id="ketqua"></p>
+
+  <script>
+    function daoNguocSo() {
+      var n = document.getElementById("num").value;
+      var dao = parseInt(n.toString().split('').reverse().join(''));
+      document.getElementById("ketqua").innerText = "Số đảo ngược: " + dao;
+    }
+  </script>
+</body>
+</html>
